@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer1';
 import Sidebar from '../components/Sidebar';
+import LiveChatPage from '../components/LiveChat';
 // import HomePage from "../components/"
 import MarketPage from '../components/Market'
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle}/>
       <MarketPage/>
+      <LiveChatPage/>
       <Footer/>
     </>
   );

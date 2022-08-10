@@ -1,28 +1,30 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:2700/";
+const API_URL = "http://localhost:6969/";
 
-export const register = (username: string, email: string, password: string) => {
-  return axios.post(API_URL + "signup", {
-    username,
+export const register = (firstname: string, lastname:string, invitecode:string, email: string, password: string) => {
+  return axios.post(API_URL + "Register", {
+    firstname,
+    lastname,
+    invitecode,
     email,
     password,
   });
 };
 
-export const login = (username: string, password: string) => {
+export const login = (email: string, password: string) => {
   return axios
-    .post(API_URL + "signin", {
-      username,
+    .post(API_URL + "login", {
+      email,
       password,
-    })
-    .then((response) => {
-      if (response.data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
-      return response.data;
     });
+    // .then((response) => {
+    //   if (response.data.accessToken) {
+    //     localStorage.setItem("user", JSON.stringify(response.data));
+    //   }
+    //   // console.log("adsfasf",response.data);s
+    //   return response.data;
+    // });
 };
 
 export const logout = () => {
@@ -31,7 +33,7 @@ export const logout = () => {
 
 export const getCurrentUser = () => {
   const userStr = localStorage.getItem("user");
-  if (userStr) return JSON.parse(userStr);
-
+  if (userStr) 
+    return JSON.parse(userStr);
   return null;
 };

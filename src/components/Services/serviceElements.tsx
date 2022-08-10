@@ -37,7 +37,7 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesCard = styled.div`
-  background: #fff;
+  background: #121414;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -65,18 +65,29 @@ export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
+  font-family: 'Droid Sans', serif;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom:32px;
   }
+  @media screen and (max-width: 960px) {
+    font-size: 2rem;
+    margin-bottom:10px;
+  }
+  
 `;
 
 export const ServicesH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
+  color: white;
+  font-family: 'Droid Sans', serif;
 `;
 
 export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: center;
+  color: white;
+  font-family: 'Droid Sans', serif;
 `;

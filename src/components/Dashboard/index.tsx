@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 // import { animateScroll as scroll } from 'react-scroll';
-import {ACg,NavBtn,NetcoinsDiv,CoinSmartDiv,NdaxDiv, TrustWalletDiv, KrakenDiv,CryptoDiv, CoinBaseDiv, ArrowForward,ArrowRight, LabelBg, ImgCg,VirgocxDiv,ServicesH1,LineHR,DashboardBody, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP, CoverContainer,DashFavourite, DashboardSpan,   DashboardOrder} from './DashboardElements';
+import {ACg,NavBtn, LabelBg, ImgCg,VirgocxDiv,ServicesH1,LineHR,DashboardBody, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP, CoverContainer,DashFavourite, DashboardSpan,   DashboardOrder} from './DashboardElements';
 import { Button } from '../ButtonElements';
-import Icon1 from '../../image/USDT.png';
-import Icon2 from '../../image/BTC.png';
-import Icon3 from '../../image/ETH.png';
+import Icon1 from '../../image/USDT.jpg';
+import Icon2 from '../../image/BTC.jpg';
+import Icon3 from '../../image/ETH.jpg';
 import { FiArrowRight } from "react-icons/fi";
 import CIcon1 from '../../image/CIcon/CIcon1.png';
 import CIcon2 from '../../image/CIcon/CIcon2.png';
@@ -15,88 +15,89 @@ import CIcon6 from '../../image/CIcon/CIcon6.png';
 import CIcon7 from '../../image/CIcon/CIcon7.png';
 import CIcon8 from '../../image/CIcon/CIcon8.png';
 
+import {useTranslation} from 'react-i18next';
+
 const Dashboard = () => {
+  const { t } = useTranslation(['dashboard']);
   return (
     <CoverContainer>
-      <DashFavourite>
-        <ServicesWrapper>
-          <ServicesCard>  
-            <ServicesIcon src={Icon1} />
-            <ServicesH2>USDT Recharge</ServicesH2>
-          </ServicesCard>
+      <ServicesWrapper>
+        <ServicesCard>  
+          <ServicesIcon src={Icon1} />
+          <ServicesH2>{t("USDT Recharge")}</ServicesH2>
+        </ServicesCard>
 
-          <ServicesCard>
-            <ServicesIcon src={Icon2} />
-            <ServicesH2>BTC Recharge</ServicesH2>
-          </ServicesCard>
+        <ServicesCard>
+          <ServicesIcon src={Icon2} />
+          <ServicesH2>{t("BTC Recharge")}</ServicesH2>
+        </ServicesCard>
 
-          <ServicesCard>
-            <ServicesIcon src={Icon3} />
-            <ServicesH2>ETH Recharge</ServicesH2>
-          </ServicesCard>
-        </ServicesWrapper>
-        <LineHR/>
-      </DashFavourite>
+        <ServicesCard>
+          <ServicesIcon src={Icon3} />
+          <ServicesH2>{t("ETH Recharge")}</ServicesH2>
+        </ServicesCard>
+      </ServicesWrapper>
+      <LineHR/>
       <DashboardBody>  
         <VirgocxDiv>
           <ImgCg src={CIcon5}/>
-          <LabelBg>virgocx Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Virgocx Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://virgocx.com/">
             <FiArrowRight/>
             </ACg>
           </NavBtn>
         </VirgocxDiv>
-        <CoinBaseDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon1}/>
-          <LabelBg>coinbase Official Recharge Channel</LabelBg>
-          <NavBtn >
+          <LabelBg>{t("Coinbase Official Deposit Channel")}</LabelBg>
+          <NavBtn>
             <ACg href="http://coinbase.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </CoinBaseDiv>
+        </VirgocxDiv>
 
-        <CryptoDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon2}/>
-          <LabelBg>crypto Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Crypto Official Deposit Channel")}</LabelBg>
           <NavBtn > 
             <ACg href="http://crypto.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </CryptoDiv>
-        <KrakenDiv>
+        </VirgocxDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon6}/>
-          <LabelBg>kraken Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Kraken Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://kraken.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </KrakenDiv>
-        <TrustWalletDiv>
+        </VirgocxDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon3}/>
-          <LabelBg>trustwallet Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Trustwallet Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://trustwallet.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </TrustWalletDiv>
-        <NdaxDiv>
+        </VirgocxDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon7}/>
-          <LabelBg>ndax Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Ndax Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://ndax.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </NdaxDiv>
-        <CoinSmartDiv>
+        </VirgocxDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon4}/>
-          <LabelBg>coinsmart Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Coinsmart Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://coinsmart.com/"><FiArrowRight/></ACg>   
           </NavBtn>
-        </CoinSmartDiv>
-        <NetcoinsDiv>
+        </VirgocxDiv>
+        <VirgocxDiv>
           <ImgCg src={CIcon8}/>
-          <LabelBg>netcoins Official Recharge Channel</LabelBg>
+          <LabelBg>{t("Netcoins Official Deposit Channel")}</LabelBg>
           <NavBtn >
             <ACg href="http://netcoin.com/"><FiArrowRight/></ACg>
           </NavBtn>
-        </NetcoinsDiv>
+        </VirgocxDiv>
       </DashboardBody>
     </CoverContainer>
   );

@@ -15,7 +15,7 @@ const CapitalRow:FC<CapitalRowProps> = memo(({ item, index }) => {
     if (item.status === 1) {
       setColor('green');
     } else {
-      setColor('red');
+      setColor('green');
     }
   }, []);
 
@@ -41,13 +41,13 @@ const CapitalRow:FC<CapitalRowProps> = memo(({ item, index }) => {
         <strong className={color}>{item.change}</strong>
       </td>
       <td className='center responsive-hide2'>{item.weight}</td>
-      <td className='responsive-hide'>
+      {/* <td className='responsive-hide'>
         <div className='line-chart'>
           <Sparklines data={item.lineChartData} width={150} height={50}>
             <SparklinesLine style={{ strokeWidth: 4 }} color={color} />
           </Sparklines>
         </div>
-      </td>
+      </td> */}
     </tr>
   );
 });

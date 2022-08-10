@@ -1,11 +1,36 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
 
+export const SelectBg= styled.select`
+  margin-bottom: 10px;
+  // margin-top: 10px;
+  font-family: Roboto;
+  outline: 0;
+  margin-left:1rem;
+  background: #12e322;
+  color: #6a0808;
+  border: 1px solid crimson;
+  padding: 10px 22px;
+  // width:18%;
+  // height:100%;
+  border-radius: 9px;
+
+  // border-radius: 50px;
+  // background: #01bf71;
+  // white-space: nowrap;
+  // padding: 10px 22px;
+  // color: #010606;
+  // font-size: 16px;
+  // outline: none;
+  // border: none;
+  // cursor: pointer;
+  // transition: all 0.2s ease-in-out;
+  // text-decoration: none;
+`; 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }:any) => ( '#1a2646' )};
+  background: ${({ scrollNav }:any) => (scrollNav ? '#000' : 'transparent')};;
   height: 80px;
-  // margin-top: 0px;
+  // margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,23 +47,31 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  
   height: 80px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
   max-width: 1100px;
 `;
-
+export const LogoImg = styled.img`
+  width:30px;
+  height:30px;
+  margin-right:5px;
+`;
+export const LanguageImage = styled.img`
+  margin: 2px;
+  cursor: pointer;
+  opacity: .5;
+`;
 export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: 'Rye', serif;
   display: flex;
   align-items: center;
-  // margin-left: 1rem;
-  width:100%;
+  margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -63,19 +96,15 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  position:relative;
-  // /* margin-right: -22px; */
+  /* margin-right: -22px; */
 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-
 export const NavItem = styled.li`
   height: 80px;
-  margin-right:3rem;
-  width:100%;
 `;
 
 export const NavLink = styled(LinkR)`
@@ -83,12 +112,10 @@ export const NavLink = styled(LinkR)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  // margin-right:1rem;
   padding: 0 1rem;
   height: 100%;
-  font-size:1.5rem;
   cursor: pointer;
-
+  font-family: 'Droid Sans', serif;
   &.active {
     border-bottom: 3px solid #01bf71;
   }
@@ -97,20 +124,20 @@ export const NavLink = styled(LinkR)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  position:relative;
-  margin-left:20rem;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
+  border-radius: 20px;
+  background: #0045ea;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
-  margin-right:1rem;
+  margin-right:5px;
+  font-family: 'Droid Sans', serif;
+  color: #FCFCFD;
   font-size: 16px;
   outline: none;
   border: none;
@@ -120,6 +147,28 @@ export const NavBtnLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: #3772FF;
+  }
+`;
+
+export const NavBtnLink1 = styled(LinkR)`
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px #353945 inset;
+  background: #23262F;
+  white-space: nowrap;
+  padding: 10px 22px;
+  margin-right:5px;
+  font-family: 'Droid Sans', serif;
+  color: #FCFCFD;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #3772FF;
   }
 `;

@@ -1,112 +1,96 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md';
 
 export const CoverContainer = styled.div`
-  // background: #0c0c0c;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
-    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
-  // display: relative;
-  // justify-content: center;
-  // align-items: center;
-  padding: 0 30px;
-  // margin-top:-1rem;
-  height: 47rem;
   position: relative;
-  min-height:120vh;
+  min-height:100%;
+  background: #141416;
+  margin-top:-16px;
 `;
 export const ACg= styled.a`
   font-size:3rem;
 `;
 export const ImgCg= styled.img`
   width:5%;
-  height:4rem;
-  margin-left:0.5rem;
+  height:3rem;
+  margin-left:0.5rem; 
   margin-top:0.5rem;
   margin-bottom:0.5rem;
   margin-left:10%;
   position:relative;
+  @media screen and (max-width: 480px) {
+    height:1.5rem;
+  }
+  @media screen and (min-width:481px) and (max-width: 768px) {
+    height:2rem;
+  }
+  @media screen and (min-width:769px) and (max-width:1024px) {
+    height:2.5rem;
+  }
+  @media screen and (min-width:1025px) and (max-width:1500px) {
+    height:3rem;
+  } 
 `;
 export const LabelBg = styled.label`
   position:relative;
-  margin-left:10%;
-  font-size:2rem;
+  // margin-left:10%;
+  font-size:30px;
+  font-family: 'Droid Sans', serif;
+  color: #fff;
+  @media screen and (max-width: 480px) {
+    font-size:15px;
+  }
+  @media screen and (min-width:481px) and (max-width: 768px) {
+    font-size:15px;
+  }
+  @media screen and (min-width:769px) and (max-width:1024px) {
+    font-size:20px;
+  }
+  @media screen and (min-width:1025px) and (max-width:1500px) {
+    font-size:30px;
+  } 
 `;
 export const VirgocxDiv = styled.div`
   width:100%;
+  height:6%;
   display:flex;
+  margin-top:1.5rem;
   align-items:center;
   justify-content:space-between;
-`;
-export const NdaxDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  justify-content:space-between;
-  align-items:center;
-`;
-export const CoinSmartDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  align-items:center;
-  justify-content:space-between;
-`;
-export const NetcoinsDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  align-items:center;
-  justify-content:space-between;
-
-`;
-export const CoinBaseDiv = styled.div`
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-`;
-export const TrustWalletDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  align-items:center;
-  justify-content:space-between;
-`;
-export const KrakenDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  align-items:center;
-  justify-content:space-between;
-`;
-export const CryptoDiv = styled.div`
-  width:100%;
-  display:flex;
-  // position:absolute;
-  align-items:center;
-  justify-content:space-between;
+  // @media screen and (max-width: 480px) {
+  //   height:15px;
+  // }
+  // @media screen and (min-width:481px) and (max-width: 768px) {
+  //   height:20px;
+  // }
+  // @media screen and (min-width:769px) and (max-width:1024px) {
+  //   height:25px;
+  // }
+  // @media screen and (min-width:1025px) and (max-width:1500px) {
+  //   height:30px;
+  // } 
 `;
 export const DashFavourite = styled.div`
-  // height: 45%;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // background: #010606;
-
-  @media screen and (max-width: 768px) {
+  @media screen and (1025px<=width) {
     height: 1100px;
   }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px;
+  @media screen and (769px<=width<= 1024px) {
+    height: 900px;
   }
+  @media screen and (481px<=width<= 768px) {
+    height: 700px;
+  }
+  @media screen and (0<=width<= 480px) {
+    height: 500px;
+  }
+ 
 `;
 export const DashboardBody= styled.div`
   justify-content: space-between;
-  align-items: left;
+  // height:100%;
   margin: 0px auto 0 auto;
   padding:0 0px;
 `;
@@ -120,7 +104,7 @@ export const LineHR= styled.hr`
   height:1rem;
 `;
 export const ServicesWrapper = styled.div`
-  max-width: 1200px;
+  // height:40vh;
   margin: 0 auto;
   display: grid;
   margin-top:1rem;
@@ -140,13 +124,15 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesCard = styled.div`
-  background: #fff;
+  background: #1c1c1e;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
   margin-right:5rem;
+  margin-left:5rem;
+  margin-top:1rem;
   max-height: 300px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -170,15 +156,14 @@ export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
-
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  }
+  
 `;
 
 export const ServicesH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
+  color: #FFF;
+  font-family: 'DM Sans', sans-serif;
 `;
 
 export const ServicesP = styled.p`
@@ -208,10 +193,10 @@ export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   position:relative;
-  margin-left:20rem;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  // margin-left:20rem;
+  // @media screen and (max-width: 768px) {
+  //   display: none;
+  // }
 `;
 
 export const NavBtnLink = styled(LinkR)`

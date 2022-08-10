@@ -48,7 +48,7 @@ export const SidebarMenu = styled.ul`
   }
 `;
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled(LinkR)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,15 +67,23 @@ export const SidebarLink = styled(LinkS)`
 
 export const SideBtnWrap = styled.div`
   display: flex;
+  margin-top:3px;
+  margin-left:5px;
   justify-content: center;
 `;
-
+export const LanguageImage = styled.img`
+  margin: 2px;
+  cursor: pointer;
+  opacity: .5;
+`;
 export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
+  border-radius: 20px;
+  background: #0045ea;
   white-space: nowrap;
-  padding: 16px 64px;
-  color: #010606;
+  padding: 10px 22px;
+  margin-right:5px;
+  font-family: 'DM Sans', sans-serif;
+  color: #FCFCFD;
   font-size: 16px;
   outline: none;
   border: none;
@@ -85,7 +93,6 @@ export const SidebarRoute = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #3772FF;
   }
 `;
